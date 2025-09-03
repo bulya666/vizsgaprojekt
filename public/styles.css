@@ -1,0 +1,170 @@
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.877);
+  color: #fff;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.719);
+}
+
+header .logo img {
+  width: 150px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Banner stílus */
+.banner {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(172, 11, 11, 0.911);
+}
+
+.banner h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.banner button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.banner button:hover {
+  background-color: rgba(0, 0, 0, 0.884);
+  color: white;
+}
+
+/* Játékok listája */
+.games {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.games h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.game-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.game-card {
+  background-color: rgba(172, 11, 11, 0.911);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.game-card img {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.game-card p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Footer stílus */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.884);
+}
+#MDM{
+    float: right;
+    padding-top: 45px;
+    padding-left: 10px;
+    font-size: 25px;
+}
