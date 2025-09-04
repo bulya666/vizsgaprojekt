@@ -1,170 +1,49 @@
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
+ /* ----- Reset ----- */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:#0b0f14;color:#e6eef6}
 
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
+    /* ----- Top bar ----- */
+    .topbar{display:flex;align-items:center;gap:20px;padding:12px 20px;background:linear-gradient(180deg,#061018 0%, #0b1220 100%);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:40px;height:40px;background:linear-gradient(135deg,#ff6b6b,#ffb86b);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#111}
+    .brand h1{font-size:18px;letter-spacing:0.6px}
 
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    .search {margin-left:20px;flex:1;max-width:720px}
+    .search input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit}
 
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
+    .top-actions{display:flex;gap:10px;align-items:center}
+    .btn{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:inherit;cursor:pointer}
 
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
+    /* ----- Layout ----- */
+    .container{max-width:1200px;margin:24px auto;padding:0 18px}
+    .hero{display:flex;justify-content:space-between;gap:20px;margin-bottom:18px}
+    .hero .tabs{display:flex;gap:10px}
+    .tab{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.02);cursor:pointer}
 
-.lato-thin-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
+    /* ----- Grid ----- */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column}
+    .card .thumb{height:120px;background:#222;display:block}
+    .card .meta{padding:12px;flex:1;display:flex;flex-direction:column}
+    .card h3{font-size:16px;margin-bottom:6px}
+    .muted{font-size:13px;color:#9fb0c8}
+    .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+    .price{font-weight:700;color:#bff39b}
+    .buy{background:#1b6cff;border:none;padding:8px 10px;border-radius:8px;color:white;cursor:pointer}
 
-.lato-light-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
+    /* ----- Modal ----- */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(3,6,10,0.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:80}
+    .modal{width:100%;max-width:900px;background:#07101a;border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.04)}
+    .modal .modal-grid{display:grid;grid-template-columns:1fr 320px;gap:14px}
+    .modal .modal-grid img{width:100%;border-radius:8px}
+    .modal h2{margin-bottom:8px}
+    .close{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px 10px;border-radius:8px;color:inherit;cursor:pointer}
 
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
+    /* ----- Responsive ----- */
+    @media (max-width:800px){
+      .modal .modal-grid{grid-template-columns:1fr}
+      .hero{flex-direction:column;align-items:flex-start}
+    }
 
-.lato-bold-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-
-body {
-  font-family: "Lato", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.877);
-  color: #fff;
-
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.719);
-}
-
-header .logo img {
-  width: 150px;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-}
-
-header nav ul li {
-  margin: 0 15px;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-}
-
-/* Banner stílus */
-.banner {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: rgba(172, 11, 11, 0.911);
-}
-
-.banner h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.banner button {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: white;
-  color: black;
-  border: none;
-  cursor: pointer;
-}
-
-.banner button:hover {
-  background-color: rgba(0, 0, 0, 0.884);
-  color: white;
-}
-
-/* Játékok listája */
-.games {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.games h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.game-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.game-card {
-  background-color: rgba(172, 11, 11, 0.911);
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.game-card img {
-  width: 200px;
-  height: 100px;
-  object-fit: cover;
-}
-
-.game-card p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #fff;
-}
-
-/* Footer stílus */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.884);
-}
-#MDM{
-    float: right;
-    padding-top: 45px;
-    padding-left: 10px;
-    font-size: 25px;
-}
+    /* small flourishes */
+    .tag{display:inline-block;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:12px}
