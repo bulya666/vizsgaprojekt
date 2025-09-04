@@ -1,61 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  <title>MDM - Főoldal</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GamePort — Játékbolt klón</title>
+  <meta name="description" content="Egyszerű, reszponzív játékkatalógus (Steam-stílusú) — demo klón, nem eredeti Steam oldal">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Fejléc -->
-  <header>
-    <div class="logo">
-      <img src="20250903_0928_Minimalist Steam Logo_simple_compose_01k477h005f4gbrxw0yj2j743h.png" alt="MDM logo">
-      <span id="MDM">MDM</span> 
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">G</div>
+      <h1>GamePort</h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#">Store</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Fő tartalom -->
-  <main>
-    <section class="banner">
-      <h1>Fedezd fel a legjobb játékokat</h1>
-      <button>Ismerkedj meg az MDM-el</button>
+    <div class="search">
+      <input id="search" placeholder="Játékok keresése... (pl. "Counter-Strike")"/>
+    </div>
+
+    <div class="top-actions">
+      <button class="btn">Közösség</button>
+      <button class="btn">Áruház</button>
+      <button class="btn">Bejelentkezés</button>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="tabs">
+        <div class="tab" data-filter="all">Ajánlott</div>
+        <div class="tab" data-filter="free">Ingyenes</div>
+        <div class="tab" data-filter="top">Top eladások</div>
+      </div>
+      <div class="controls">
+        <span class="tag">Demo klón — nem a Valve terméke</span>
+      </div>
     </section>
 
-    <section class="games">
-      <h2>Ajánlott Játékok</h2>
-      <div class="game-list">
-        <div class="game-card">
-          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_184x69.jpg" alt="Game 1">
-          <p>Counter-Strike: Global Offensive</p>
-        </div>
-        <div class="game-card">
-          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/capsule_184x69.jpg" alt="Game 2">
-          <p>Dota 2</p>
-        </div>
-        <div class="game-card">
-          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/440/capsule_184x69.jpg" alt="Game 3">
-          <p>Team Fortress 2</p>
-        </div>
-      </div>
+    <section id="catalog" class="grid" aria-live="polite">
+      <!-- Cards will be injected here by JS -->
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 MDM</p>
-  </footer>
-
-  <script src="scripts.js"></script>
+  <!-- Modal for game details -->
+  <div id="modal" class="modal-backdrop" role="dialog" aria-hidden="true">
+    <div class="modal" role="document">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h2 id="m-title">Játék címe</h2>
+        <button class="close" id="m-close">Bezár</button>
+      </div>
+      <div class="modal-grid">
+        <div>
+          <img id="m-cover" src="" alt="">
+          <p id="m-desc" style="margin-top:8px;color:#cfe6ff"></p>
+        </div>
+        <aside>
+          <p class="muted">Ár</p>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+            <div id="m-price" style="font-weight:700;font-size:20px;color:#bff39b">Ingyen</div>
+            <button class="buy">Kosárba</button>
+          </div>
+          <p class="muted">Képek</p>
+          <div id="m-shots" style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap"></div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
